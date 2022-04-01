@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from .models import Atendimento, Responsavel, Pet
 from .form import AtendimentoForm, PetForm, ResponsavelForm
 
-
 def home(request):
      data = {}
      data['lista'] = ['t1', 't2', 't3']
@@ -42,7 +41,7 @@ def novo_pet(request):
     form = PetForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('url_lista')
+        return redirect('url_lista_pet')
     data['form'] = form
     return render(request, 'atendimento/pet_form.html', data)
 
@@ -52,7 +51,7 @@ def novo_responsavel(request):
     form = ResponsavelForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('url_lista')
+        return redirect('url_lista_responsavel')
     data['form'] = form
     return render(request, 'atendimento/responsavel_form.html', data)
 
