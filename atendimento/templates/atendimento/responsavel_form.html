@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CADASTRO RESPONSAVEL</title>
+</head>
+<body>
+    <H2>Cadastro de Responsáveis</H2>
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit"> SALVAR </button>
+    {% if responsavel %}
+    <button><a href="{% url 'url_delete' responsavel.id %}">REMOVER</a></button>
+    {% endif %}
+</form>
+    <button><a href="{% url 'url_home' %}"> PÁGINA INICIAL </a></button>
+
+</body>
+</html>

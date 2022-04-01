@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTA DE RESPONSÁVEIS CADASTRADOS</title>
+</head>
+<body>
+    <h2>Lista de Responsáveis Cadastrados</h2>
+
+    <ul>
+     {% for Responsavel in lista %}
+         <li><a href="{% url "url_atualizar_responsavel" Responsavel.id %}"> Nome: {{ Responsavel.nome }}, Telefone: {{ Responsavel.telefone }}, Tipo: {{ Responsavel.tipo }}</a></li>
+     {% endfor %}
+     </ul>
+
+    <button><a href="{% url 'url_home' %}"> PÁGINA INICIAL </a></button>
+
+</body>
+</html>

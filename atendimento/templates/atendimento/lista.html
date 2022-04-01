@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTA DE ATENDIMENTOS ABERTOS</title>
+</head>
+<body>
+    <h2>Lista de Atendimentos Abertos</h2>
+
+    <ul>
+     {% for Atendimento in lista %}
+         <li><a href="{% url 'url_atualizar' Atendimento.id %}"> Pet: {{ Atendimento.pet }}, Tipo de Atendimento: {{ Atendimento.tipo }}, Responsável:
+             {{ Atendimento.responsavel }}, Horário: {{ Atendimento.data }}</a></li>
+     {% endfor %}
+     </ul>
+
+    <button><a href="{% url 'url_home' %}"> PÁGINA INICIAL </a></button>
+
+</body>
+</html>

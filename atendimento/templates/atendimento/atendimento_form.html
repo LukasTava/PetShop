@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CADASTRO ATENDIMENTO</title>
+</head>
+<body>
+    <H2>Cadastro de Atendimentos</H2>
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit"> SALVAR </button>
+    {% if atendimento %}
+    <button><a href="{% url 'url_delete' atendimento.id %}">REMOVER</a></button>
+    {% endif %}
+</form>
+
+    <button><a href="{% url 'url_home' %}"> PÁGINA INICIAL </a></button>
+
+</body>
+</html>

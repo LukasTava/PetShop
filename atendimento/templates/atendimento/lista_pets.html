@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTA DE PETS CADASTRADOS</title>
+</head>
+<body>
+    <h2>Lista de Pets Cadastrados</h2>
+
+    <ul>
+     {% for Pet in lista %}
+         <li><a href="{% url 'url_atualizar_pet' Pet.id %}"> Nome: {{ Pet.nome }}, Dono: {{ Pet.dono }}, Telefone: {{ Pet.telefone }}</a></li>
+     {% endfor %}
+     </ul>
+
+    <button><a href="{% url 'url_home' %}"> PÁGINA INICIAL </a></button>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PETSHOP</title>
+</head>
+<body>
+    <h1>PET SHOP</h1>
+    <h2>Cadastro</h2>
+    <ul>
+        <li><a href="{% url 'url_novopet' %}"> Cadastrar Novo Pet </a></li>
+        <li><a href="{% url 'url_novoresponsavel' %}"> Cadastrar Novo Responsável </a></li>
+        <li><a href="{% url 'url_novoatendimento' %}"> Cadastrar Novo Atendimento </a></li>
+    </ul>
+    <h2>Listas de Itens Cadastrados</h2>
+    <ul>
+        <li><a href="{% url 'url_lista' %}"> Listas de Atendimentos Cadastrados</a></li>
+        <li><a href="{% url 'url_lista_pet' %}"> Listas de Pets Cadastrados</a></li>
+        <li><a href="{% url 'url_lista_responsavel' %}"> Listas de Responsáveis Cadastrados</a></li>
+    </ul>
+
+</body>
+</html>
